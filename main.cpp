@@ -82,8 +82,13 @@ int main(int argc, char **argv) {
     if (strcmp(argv[3], "eclus") == 0) {
         if (argc == 4) {
             eclus(corr, cls); 
+        } else if (argc == 5) {
+            stringstream ss; 
+            int plen;  
+            ss << argv[4]; 
+            ss >> plen; 
+            eclus(corr, cls, plen); 
         }
-        // TODO: add extra options
     }
     // TODO: add vertex based
     
